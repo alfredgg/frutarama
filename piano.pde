@@ -6,10 +6,10 @@ Minim minim;
 Drawer drawer;
 
 int get_id_by_key(String key_name) {
-  if (key_name.toUpperCase().equals("UP")) return -1;
-  else if (key_name.toUpperCase().equals("DOWN")) return -2;
-  else if (key_name.toUpperCase().equals("LEFT")) return -3;
-  else if (key_name.toUpperCase().equals("RIGHT")) return -4;
+  if (key_name.toUpperCase().equals("UP")) return 38;
+  else if (key_name.toUpperCase().equals("DOWN")) return 40;
+  else if (key_name.toUpperCase().equals("LEFT")) return 37;
+  else if (key_name.toUpperCase().equals("RIGHT")) return 39;
   else if (key_name.toUpperCase().equals("CLICK")) return -5;
   return 0;
 }
@@ -66,7 +66,7 @@ void draw() {
 
 void keyPressed() {
   for (int i=0; i<pushers.length; i++) {
-    boolean isKey = pushers[i].activator == keyCode;
+    boolean isKey = (pushers[i].activator == keyCode || pushers[i].activator == (int)key);
     boolean isClick = ((pushers[i].activator == -5) && (mousePressed));
     if (isKey || isClick) {
       pushers[i].activate();
@@ -77,7 +77,6 @@ void keyPressed() {
 }
 
 void mousePressed() {
-  println("asdfas");
   keyPressed();
 }
 
