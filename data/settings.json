@@ -12,7 +12,8 @@
 		{ "color": [120, 54, 255], "position": [250, 400], "activator": "s", "sound": "p4.wav" },
 		{ "color": [230, 0, 10], "position": [600, 400], "activator": "d", "sound": "p5.wav" },
 		{ "color": [140, 47, 0], "position": [150, 550], "activator": "z", "sound": "p6.wav" },
-		{ "color": [240, 7, 0], "position": [500, 550], "activator": "x", "sound": "p7.wav" },
-		{ "color": [40, 25, 180], "position": [700, 550], "activator": "c", "sound": "p8.wav" }
+		{ "color": [240, 7, 0], "position": [500, 550], "activator": "up", "sound": "p7.wav" },
+		{ "color": [40, 25, 180], "position": [700, 550], "activator": "click", "sound": "p8.wav" },
+		{ "color": [40, 25, 40], "position": [400, 600], "activator": " ", "sound": "p8.wav" }
 	]
 }

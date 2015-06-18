@@ -66,4 +66,10 @@ class Pusher {
     player.rewind(); 
     player.play();
   }
+  
+  boolean is_the_key() {
+    println(keyCode);
+    if ((keyCode == UP) && (activator == -1)) return true;
+    return activator == (int)key;
+  }
 }

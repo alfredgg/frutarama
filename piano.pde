@@ -5,6 +5,14 @@ int bgColor;
 Minim minim;
 Drawer drawer;
 
+int get_id_by_key(String key_name) {
+  if (key_name.toUpperCase().equals("UP")) return -1;
+  else if (key_name.toUpperCase().equals("DOWN")) return -2;
+  else if (key_name.toUpperCase().equals("LEFT")) return -3;
+  else if (key_name.toUpperCase().equals("RIGHT")) return -4;
+  else if (key_name.toUpperCase().equals("CLICK")) return -5;
+  return 0;
+}
 
 void setup() { 
   JSONObject json = loadJSONObject("settings.json");
@@ -29,8 +37,10 @@ void setup() {
     JSONObject _pusher = _pushers.getJSONObject(i);
     JSONArray _color = _pusher.getJSONArray("color");
     JSONArray _position = _pusher.getJSONArray("position");
-    char activator = _pusher.getString("activator").charAt(0);
     String sound = _pusher.getString("sound");
+    
+    String actValue = _pusher.getString("activator");
+    int activator = (actValue.length() == 1) ? actValue.charAt(0) : get_id_by_key(actValue);
     
     Pusher pusher = new Pusher(color(_color.getInt(0), _color.getInt(1), _color.getInt(2)), sound);
     pusher.positionX = _position.getInt(0);
@@ -56,12 +66,19 @@ void draw() {
 
 void keyPressed() {
   for (int i=0; i<pushers.length; i++) {
-    if (pushers[i].activator == key) {
+    boolean isKey = pushers[i].activator == keyCode;
+    boolean isClick = ((pushers[i].activator == -5) && (mousePressed));
+    if (isKey || isClick) {
       pushers[i].activate();
       drawer.new_dest(pushers[i].positionX, pushers[i].positionY);
       break;
     }
   }
+}
+
+void mousePressed() {
+  println("asdfas");
+  keyPressed();
 }
 
 void stop() {
