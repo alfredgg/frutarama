@@ -4,4 +4,4 @@ Interactive piano for being used with Makey Makey or Arduino. When they connect 
 
 The computer will show a list of fruits which must be pressed by the user. If the user get the right order he (or she) scores a point.
 
-It uses [http://emojione.com/](Emogi One).
+It uses [Emogi One](http://emojione.com/).
