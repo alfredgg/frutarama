@@ -326,7 +326,7 @@ class EndWithRecord extends State {
   
   EndWithRecord(int points) {
     println("EndWithRecord State");
-    stars = new Stars(50, 30, recordParty, 75);
+    stars = new Stars(record_party_size, 30, recordParty, 75);
     recordName = "";
     record = points;
     play_sound(record_sound);

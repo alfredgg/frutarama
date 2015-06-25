@@ -16,7 +16,9 @@ class RecordBox {
   }
   
   void keyPressed(int kcode) {
-    if ((key >= 'a' && key <= 'z') || (key >= 'A' && key <= 'Z')) {
+    if ((key >= 'a' && key <= 'z') 
+      || (key >= 'A' && key <= 'Z')
+      || (key >= '0' && key <= '9')) {
       if (recordName.length() < 15)
         recordName += key;
     } else if (key == ENTER) {

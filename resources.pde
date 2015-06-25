@@ -15,6 +15,7 @@ AudioPlayer bmusic;
 PImage[] iOptions;
 PImage[] recordParty;
 int[] options; 
+int record_party_size;
 
 void load_resources() {
   gamestartLogo = loadImage("title.png");
@@ -24,6 +25,8 @@ void load_resources() {
   aprieta = loadImage("aprieta.png");
   
   JSONObject json = loadJSONObject("settings.json");
+  
+  record_party_size = json.getInt("record_party_size");
   
   String right_img_name = json.getString("right_img");
   String wrong_img_name = json.getString("wrong_img");

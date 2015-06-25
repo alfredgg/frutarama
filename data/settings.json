@@ -24,5 +24,6 @@
 	],
 	"ini_record_name": "Nobody",
 	"ini_record_value": 0,
-	"music": ""
+	"music": "",
+	"record_party_size": 50
 }
