@@ -213,6 +213,10 @@ class YourTry extends State {
   void _update () {
     if (get_current_mill() > time) current_state = new Try(list);
   }
+  
+    void keyPressed(int kcode) {
+      current_state = new Try(list, kcode);
+    }
 }
 
 class Try extends State {
@@ -234,6 +238,11 @@ class Try extends State {
     current_element = 0;
     endTry = get_current_mill() + time_try * 1000; 
     punt = list.size() - 1;
+  }
+  
+  Try (ArrayList<Integer> listOfTries, int kcode) {
+    this(listOfTries);
+    keyPressed(kcode);
   }
   
   void _draw() {

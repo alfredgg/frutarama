@@ -8,11 +8,11 @@
 	"seconds_try": 3,
 	"options": [
 		{"key": "up", "image": "orange.png", "sound": ""},
-		{"key": "down", "image": "lemon.png", "sound": ""},
+		{"key": "down", "image": "cherries.png", "sound": ""},
 		{"key": "right", "image": "banana.png", "sound": ""},
-		{"key": "left", "image": "tomatoe.png", "sound": ""},
-		{"key": "click", "image": "eggplant.png", "sound": ""},
-		{"key": " ", "image": "rose.png", "sound": ""}
+		{"key": "left", "image": "pineaple.png", "sound": ""},
+		{"key": "click", "image": "strawberry.png", "sound": ""},
+		{"key": " ", "image": "watermelon.png", "sound": ""}
 	],
 	"record_party": [
 		"party0.png",
@@ -22,8 +22,8 @@
 		"party4.png",
 		"party5.png"
 	],
-	"ini_record_name": "Nobody",
-	"ini_record_value": 0,
+	"ini_record_name": "Mikel_HL",
+	"ini_record_value": 3,
 	"music": "",
 	"record_party_size": 50
 }
